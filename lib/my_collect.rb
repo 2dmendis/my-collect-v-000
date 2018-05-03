@@ -6,7 +6,7 @@ def my_collect(languages)
   while i < languages.length 
   
   yield(languages[i])
-  if languages[i].scan(/\w+(?:\p{ASCII})?/).size == 1
+  if languages[i].scan(/\w+(\p{ASCII})?/).size == 1
   first << languages[i].upcase
 else 
   first << languages[i].split(" ").first
